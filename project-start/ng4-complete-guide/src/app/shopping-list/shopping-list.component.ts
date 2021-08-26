@@ -1,3 +1,4 @@
+import { Ingredient } from './../shered/ingredient.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListComponent implements OnInit {
 
-  ingredientes = [];
+  ingredients: Ingredient[] = [
+    new Ingredient('Apple', 5),
+    new Ingredient('Tomato', 3),
+    new Ingredient('Black Spice', 1)
+  ];
 
   constructor() { }
 

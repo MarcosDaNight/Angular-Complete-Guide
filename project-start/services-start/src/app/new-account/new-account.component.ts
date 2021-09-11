@@ -13,11 +13,14 @@ export class NewAccountComponent {
 
   constructor(private logginService: LogginService,
               private accountsService: AccountService) {
+      this.accountsService.statusUpdated.subscribe(
+        (status:string) => alert('New Status: ' + status)
+      );
 
   }
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountsService.addAccount(accountName, accountStatus);
-   // this.logginService.logStatusChange(accountStatus);
+    //this.logginService.logStatusChange(accountStatus);
     
   }
 }

@@ -31,4 +31,5 @@ export class AccountService {
       this.accounts[id].status = status;
       this.loggingService.logStatusChange(status);
     }
+    
 }
